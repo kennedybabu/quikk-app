@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Container  from 'react-bootstrap/Container'
 import Form  from 'react-bootstrap/Form'
 import Button  from 'react-bootstrap/Button'
@@ -6,6 +6,20 @@ import { useNavigate } from 'react-router-dom'
 
 
 const Signup = () => {
+    const [email, setEmail] = useState('')
+    const [password,setPassword] = useState('')
+    // const {user, signUp} = UserAuth()
+    const navigate = useNavigate()
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault()
+    //   try {
+    //     await signUp(email,password)
+    //     navigate('/')
+    //   } catch (error) {
+    //     console.log(error)
+    //   }
+    }
     
 
 
@@ -13,7 +27,7 @@ const Signup = () => {
     <Container className='auth-wrapper'>
         <h3>sign up</h3>
         <div>
-            <Form className='form-wrapper'>
+            <Form className='form-wrapper' onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label><br/>
                     <Form.Control type="email" placeholder="Enter email" />                   
