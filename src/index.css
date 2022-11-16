@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400&family=Montserrat:wght@100;300;500;700&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ overflow-x: hidden;
+ margin: 0;
+ padding: 0;
+ font-family: 'Montserrat', sans-serif;
 }
 
 code {
@@ -13,9 +13,17 @@ code {
 }
 
 
+
+
 .nav {  
-  min-height: 100px; 
-  padding: 1rem 0;
+  height: 60px; 
+  padding: 1rem 2rem;
+  position: absolute;
+  left: 0;
+  max-width: 100%;
+  z-index: 50;
+  right: 0;
+  top: 0;
 }
 
 
@@ -26,4 +34,44 @@ code {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+
+.landing {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  
+}
+
+
+.overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.705), rgba(0, 0, 0, 0.521));
+  height: 100%;
+}
+
+
+.btn {
+  outline: 1px solid black;
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  display: flex;
+  justify-items: center;
+  z-index: 20;
 }
