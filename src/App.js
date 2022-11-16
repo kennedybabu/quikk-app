@@ -4,17 +4,19 @@ import Nav from './components/Navbar';
 import Landingpage from './pages/Landingpage';
 import { Route, Routes } from 'react-router-dom';
 import Signup from './pages/Signup';
-
+import { AuthContextProvider } from './context/AuthContext'
 
 
 function App() {
   return (
     <div>
-      <Nav />
-      <Routes>        
-        <Route path='/' exact element={<Landingpage />} />
-        <Route path='/signup' element={<Signup/>} />
-      </Routes>      
+      <AuthContextProvider>
+        <Nav />
+        <Routes>
+          <Route path='/' exact element={<Landingpage />} />
+          <Route path='/signup' element={<Signup />} />
+        </Routes>
+      </AuthContextProvider>
     </div>
   );
 }
